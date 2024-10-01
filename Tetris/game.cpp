@@ -93,6 +93,7 @@ void Game::MoveDown()
 	if (!gameOver)
 	{
 		currentBlock.Move(1, 0);
+		score += 1;
 		if (IsBlockOutside() || Blockfits() == false)
 		{
 			currentBlock.Move(-1, 0);
@@ -179,5 +180,4 @@ void Game::UpdateScore(int LinesCleared, int MoveDownPoints)
 	default:
 		break;
 	}
-	score += MoveDownPoints;
 }
